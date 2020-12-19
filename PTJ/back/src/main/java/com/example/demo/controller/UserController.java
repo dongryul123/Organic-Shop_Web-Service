@@ -30,11 +30,6 @@ public class UserController {
 		System.out.println("유저 리스트 출력");
 		return userMapper.userList();
 	}
-	// @GetMapping
-	// public void userList(){
-
-	// 	System.out.println("왜 안되딛에뎅데에데에");
-	// }
 	
 	@PostMapping
 	void insertUser(@RequestBody UserVO user) {
