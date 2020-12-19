@@ -53,7 +53,7 @@ class NavBar extends Component{
                                     <li><a href="#">매실청</a></li>
                                 </ul>
                                 </li>
-                                <li><a href="#services">등록</a></li>
+                                <li><a href="/add-product">등록</a></li>
                                 <li><a href="#portfolio">모임 찾기</a></li>
                                 <li className="drop-down"><a href="">Drop Down</a>
                                 <ul>
