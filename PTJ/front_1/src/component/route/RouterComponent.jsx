@@ -4,7 +4,7 @@ import UserListComponent from "../user/UserListComponent";
 import LoginComponent from "../user/LoginComponent";
 import MainComponent from "../user/MainComponent";
 import Form from "../user/Add/Form";
-import AddProduct from "../product/AddProduct";
+import ProductForm from "../product/ProductForm";
 
 const AppRouter = () =>{
     return(
@@ -17,7 +17,7 @@ const AppRouter = () =>{
                     <Route path="/add-user" component={Form} />
                     <Route path="/login" component={LoginComponent} />
 
-                    <Route path="/add-product" component={AddProduct} />
+                    <Route path="/add-product" component={ProductForm} />
                 </Switch>
             </div>
             </BrowserRouter>
