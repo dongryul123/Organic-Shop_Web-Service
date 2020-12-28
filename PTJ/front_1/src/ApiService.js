@@ -33,6 +33,26 @@ class ApiService{
     addProduct(product){
         return axios.post(PRODUCT_API_BASE_URL, product);
     }
+
+    getProduct(){
+        return axios
+            .get(PRODUCT_API_BASE_URL)
+            .then( res => {
+                //alert("상품 조회 성공");
+                // console.log("상품 조회 성공");
+                var temp = JSON.stringify(res.data);
+                var temp2 = JSON.parse(temp);
+                //console.log(JSON.stringify(res.data));
+                //console.log(typeof(JSON.stringify(res.data)));
+                //console.log(temp2);
+                // return JSON.parse(JSON.stringify(res.data));
+                return temp2;
+              })
+              .catch(err => {
+                  alert("다시 기입해주세요.");
+                  console.log('saveUser() 에러', err);
+              });
+    }
 }
 
 export default new ApiService();

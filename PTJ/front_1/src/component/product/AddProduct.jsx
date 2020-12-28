@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ApiService from '../../ApiService'
-import { makeStyles } from '@material-ui/core/styles';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import Grid from '@material-ui/core/Grid';
@@ -33,7 +32,7 @@ class AddProduct extends Component {
         }
 
 
-        saveUser = (e) =>{
+        saveProduct = (e) =>{
             e.preventDefault();
             
             let product = {
@@ -51,7 +50,7 @@ class AddProduct extends Component {
                     message: product.name + "이 등록되었습니다."
                 })
                 alert("상품 등록 성공");
-                document.location.href = "/"
+                document.location.href = "/add-product"
             })
             .catch(err => {
                 alert("다시 기입해주세요.");
@@ -60,15 +59,6 @@ class AddProduct extends Component {
         }
 
         render(){
-            const myStyle = {
-                formControl: {
-                    margin: 1,
-                    minWidth: 120,
-                  },
-                  selectEmpty: {
-                    marginTop: 1,
-                  },
-              };
 
             return (
                 <React.Fragment>
@@ -105,17 +95,18 @@ class AddProduct extends Component {
                         <InputLabel id="demo-simple-select-outlined-label">카테고리</InputLabel>
                         <Select
                         labelId="demo-simple-select-outlined-label"
-                        id="demo-simple-select-outlined"
-                        value={this.age}
-                        onChange={this.handleChange}
-                        label="Age"
+                        id="category_id"
+                        name="category_id"
+                        value={this.state.category_id}
+                        onChange={this.onChange}
+                        label="category_id"
                         >
                         <MenuItem value="">
-                            <em>기타</em>
+                            <em>--설정--</em>
                         </MenuItem>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
+                        <MenuItem value={11}>청</MenuItem>
+                        <MenuItem value={12}>유기농</MenuItem>
+                        <MenuItem value={13}>담금주</MenuItem>
                         </Select>
                     </FormControl>
                     </Grid>
@@ -123,22 +114,23 @@ class AddProduct extends Component {
                     <Grid item xs={12} sm={6}>
                     <TextField
                         required
-                        id="lastName"
-                        name="lastName"
-                        label="이름"
-                        value={this.state.lastName}
+                        id="on_sale"
+                        name="on_sale"
+                        label="바로 판매"
+                        value={this.state.on_sale}
                         onChange={this.onChange}
                         fullWidth
                         autoComplete="family-name"
                     />
                     </Grid>
+
                     <Grid item xs={12}>
                     <TextField
                         required
-                        id="age"
-                        name="age"
-                        label="나이"
-                        value={this.state.age}
+                        id="on_discount"
+                        name="on_discount"
+                        label="할인률 적용"
+                        value={this.state.on_discount}
                         onChange={this.onChange}
                         fullWidth
                         autoComplete="shipping address-line1"
@@ -148,30 +140,17 @@ class AddProduct extends Component {
                     <Grid item xs={12}>
                     <TextField
                         required
-                        id="tel"
-                        name="tel"
-                        label="전화번호"
-                        value={this.state.tel}
-                        onChange={this.onChange}
-                        fullWidth
-                        autoComplete="shipping address-line2"
-                    />
-                    </Grid>
-
-                    <Grid item xs={12}>
-                    <TextField
-                        required
-                        id="address"
-                        name="address"
-                        label="주소"
-                        value={this.state.address}
+                        id="img_path"
+                        name="img_path"
+                        label="이미지 URL"
+                        value={this.state.img_path}
                         onChange={this.onChange}
                         fullWidth
                         autoComplete="shipping address-line2"
                     />
                     </Grid>
                 </Grid>
-                <Button variant="contained" color="primary" onClick={this.saveUser}>가입</Button>
+                <Button variant="contained" color="primary" onClick={this.saveProduct}>등록</Button>
                 
                 </React.Fragment>
             );

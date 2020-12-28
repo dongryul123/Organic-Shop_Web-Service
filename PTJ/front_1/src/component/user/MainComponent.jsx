@@ -1,29 +1,17 @@
 import React, {Component} from 'react';
-import ApiService from "../../ApiService";
-
-import Table from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/TableBody'
 // import Header from '@material-ui/core/Header'
 // import Nav from '@material-ui/core/Nav'
 // import Section from '@material-ui/core/Section'
-import TableCell from '@material-ui/core/TableCell'
-import TableHead from '@material-ui/core/TableHead'
-import TableRow from '@material-ui/core/TableRow'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
-import CreateIcon from '@material-ui/icons/Create'
-import DeleteIcon from '@material-ui/icons/Delete'
-import { red } from '@material-ui/core/colors';
+// import TableCell from '@material-ui/core/TableCell'
+// import TableHead from '@material-ui/core/TableHead'
+// import TableRow from '@material-ui/core/TableRow'
+// import Button from '@material-ui/core/Button'
+// import Typography from '@material-ui/core/Typography'
+// import CreateIcon from '@material-ui/icons/Create'
+// import DeleteIcon from '@material-ui/icons/Delete'
+// import { red } from '@material-ui/core/colors';
 
 class UserListComponent extends Component{
-
-    constructor(props){
-        super(props);
-
-    }
-
-    
-
     render(){
 
         return(
