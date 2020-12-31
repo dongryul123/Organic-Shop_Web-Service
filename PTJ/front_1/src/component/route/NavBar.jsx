@@ -34,7 +34,7 @@ class NavBar extends Component{
                     
                             <nav className="nav-menu d-none d-lg-block">
                             <ul>
-                                <li className="active"><a href="/">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li className="drop-down"><a href="#about">식품</a>
                                 <ul>
                                     <li><a href="AllProducts">전체</a></li>
@@ -43,7 +43,7 @@ class NavBar extends Component{
                                 </ul>
                                 </li>
                                 <li><a href="/add-product">등록</a></li>
-                                <li><a href="#portfolio">모임 찾기</a></li>
+                                <li><a href="#portfolio">장바구니</a></li>
                                 <li className="drop-down"><a href="">Drop Down</a>
                                 <ul>
                                     <li><a href="#">Drop Down 1</a></li>
@@ -61,7 +61,7 @@ class NavBar extends Component{
                                     <li><a href="#">Drop Down 4</a></li>
                                 </ul>
                                 </li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#contact">문의</a></li>
                     
                             </ul>
                             </nav>

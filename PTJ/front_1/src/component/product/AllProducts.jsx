@@ -97,7 +97,7 @@ class AllProducts extends Component {
                           </Grid>
                         </Grid>
                         <Grid item>
-                          <Typography variant="subtitle1">$ 가격 (원)</Typography>
+                          <Typography variant="subtitle1">$ {myProductData.price} (원)</Typography>
                         </Grid>
                       </Grid>
                     </Grid>
