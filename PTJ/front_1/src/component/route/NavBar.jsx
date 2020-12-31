@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 //import addUser from '../user/UserListComponent'
+import AuthenticationService from '../JWT/AuthenticationService';
 
 class NavBar extends Component{
 
@@ -10,6 +11,8 @@ class NavBar extends Component{
     } 
 
     render() {
+        const isUserLoggedIn = AuthenticationService.isUserLoggedIn();
+
         return(
             <div>
                 {/* <AppBar position="static">
@@ -62,12 +65,16 @@ class NavBar extends Component{
                                 </ul>
                                 </li>
                                 <li><a href="#contact">문의</a></li>
+                                {isUserLoggedIn && <li><a href="#contact">나의 페이지</a></li>}
+
                     
                             </ul>
                             </nav>
                     
-                            <a href="login" className="get-started-btn scrollto">로그인</a>
-                    
+                            {!isUserLoggedIn && <a href="login" className="get-started-btn scrollto">로그인</a>}
+                            {isUserLoggedIn && <a href="/login" className="get-started-btn scrollto" onClick={AuthenticationService.logout}>로그아웃</a>}
+
+
                         </div>
                     </header>
                     </div>
