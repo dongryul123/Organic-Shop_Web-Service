@@ -14,7 +14,14 @@ class AllProducts extends Component {
  
     state = {
         data : [],
+        idx : 100
     };
+
+    detailPage(value){
+      // console.log(value);
+      // alert("클릭되었습니다.");
+      window.location.href = '/'+value;
+    }
  
     // getMyData = async () => {
     //     let data = await axios.get('http://localhost:8080/products');
@@ -29,6 +36,9 @@ class AllProducts extends Component {
         axios.get('http://localhost:8080/products').then(res => {
             this.setState({data: res.data});
         });
+
+        console.log("@@@");
+        console.log(this.state.data);
     }
  
     componentDidUpdate() {
@@ -50,6 +60,7 @@ class AllProducts extends Component {
               padding: 30,
               margin: 50,
               maxWidth: 500,
+              cursor:'pointer'
             },
             image: {
               width: 128,
@@ -70,7 +81,7 @@ class AllProducts extends Component {
                     //return <p key={ myDeviceData.key }>name : { myDeviceData.name }</p>;
                     //return <p>name : { myDeviceData.name }</p>;
                     //return <Paper style={{padding:30, margin:50}}>
-                    return <Paper style={classes.paper}>
+                    return <Paper style={classes.paper} onClick={this.detailPage.bind(this, myProductData.id)}>
                     <Grid container spacing={2}>
                       <Grid item>
                         <ButtonBase style={classes.image}>
@@ -110,6 +121,5 @@ class AllProducts extends Component {
         );
     }
 }
- 
 export default AllProducts
 ;

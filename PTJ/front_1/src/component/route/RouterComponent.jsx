@@ -7,6 +7,7 @@ import Form from "../user/Add/Form";
 import ProductForm from "../product/ProductForm";
 // import AllProducts from "../product/AllProducts";
 import AllProducts from "../product/AllProducts";
+import DetailProduct from "../product/DetailProduct";
 
 import LoginApp from "../JWT/LoginApp";
 import Login from "../user/Login";
@@ -19,30 +20,25 @@ const AppRouter = () =>{
     return(
         <div>
             <BrowserRouter>
-            <div style={style}>
+            <div style={{margin: 20}}>
                 <NavBar />
                 <Switch>
                     <Route exact path="/" component={MainComponent} />
-
                     <Route path="/users" component={UserListComponent} />
                     <Route path="/add-user" component={Form} />
                     {/* <Route path="/login" component={LoginComponent} /> */}
-                    <Route path="/login" component={Login} />
+                    <Route exact path="/login" component={Login} />
 
                     <Route path="/add-product" component={ProductForm} />
-                    <Route path="/AllProducts" component={AllProducts} />
-                    
-                    <Route path="/jwt" component={LoginApp} />
+                    <Route exact path="/AllProducts" component={AllProducts} />
+                    <Route exact path="/:id" component={DetailProduct} />
                 </Switch>
             </div>
             </BrowserRouter>
         </div>
     );
 }
-
-const style = {
-    margin: '20px',
-}
-
 export default AppRouter;
+
+
                     
