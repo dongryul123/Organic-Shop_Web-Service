@@ -13,5 +13,6 @@ public interface MainMapper {
 	void insertProduct(ProductVO product);
 	//void deleteUser(int id);
 	ProductVO fetchProductByID(int id);
+	// 젠킨스 테스트
 	
 }
