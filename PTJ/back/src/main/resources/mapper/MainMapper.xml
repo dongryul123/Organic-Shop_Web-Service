@@ -13,4 +13,9 @@
 			ORDER BY id
 		</select>
 		
+		<select id="fetchProductByID" resultType="com.example.demo.vo.ProductVO"
+		parameterType="int">
+			SELECT * FROM products
+			where id = #{id}
+		</select>
 	</mapper>

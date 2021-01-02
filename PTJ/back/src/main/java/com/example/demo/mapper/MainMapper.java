@@ -4,7 +4,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.example.demo.vo.ProductVO;
-import com.example.demo.vo.UserVO;
 
 @Mapper
 public interface MainMapper {
@@ -13,5 +12,6 @@ public interface MainMapper {
 	//void updateUser(UserVO user);
 	void insertProduct(ProductVO product);
 	//void deleteUser(int id);
+	ProductVO fetchProductByID(int id);
 	
 }
