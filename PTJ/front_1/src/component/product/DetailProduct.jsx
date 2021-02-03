@@ -57,12 +57,48 @@ class AllProducts extends Component {
         const {params} = this.props.match;
         //this.TempPrint(params.id);
         return (
-            <div style={{marginTop:100}}>
-                <ul>
-                    <li>{this.state.data.name}</li>
-                    <li>{this.state.data.price}</li>
-                </ul>
-            </div>
+            // <div style={{marginTop:100}}>
+            //     <ul>
+            //         <li>{this.state.data.name}</li>
+            //         <li>{this.state.data.price}</li>
+            //     </ul>
+            // </div>
+            <div class="container">
+    <div class="row" style={{marginTop:100}}>
+      <div class="col-lg-9">
+        <div class="card mt-4">
+          <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt=""/>
+          <div class="card-body">
+            <h3 class="card-title">{this.state.data.name}</h3>
+            <h4>{this.state.data.price}원</h4>
+            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+            3.0 stars
+          </div>
+        </div>
+
+        <div class="card card-outline-secondary my-4">
+          <div class="card-header">
+            상품 설명
+          </div>
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+
+            <a href="#" class="btn btn-success">바로 주문</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+    
         );
     }
 }
