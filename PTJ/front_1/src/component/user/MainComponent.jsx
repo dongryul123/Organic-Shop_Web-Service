@@ -11,7 +11,7 @@ import React, {Component} from 'react';
 // import DeleteIcon from '@material-ui/icons/Delete'
 // import { red } from '@material-ui/core/colors';
 
-class UserListComponent extends Component{
+class MainComponent extends Component{
     render(){
 
         return(
@@ -84,7 +84,7 @@ class UserListComponent extends Component{
 
 
 
-                <section id="services" className="services section-bg">
+                {/* <section id="services" className="services section-bg">
                 <div className="container" data-aos="fade-up">
 
                     <div className="section-title">
@@ -176,23 +176,23 @@ class UserListComponent extends Component{
                 <form action="forms/contact.php" method="post" role="form" className="php-email-form">
                 <div className="row">
                     <div className="form-group col-md-6">
-                    <label for="name">성함</label>
+                    <label htmlFor="name">성함</label>
                     <input type="text" name="name" className="form-control" id="name" data-rule="minlen:4" data-msg="성함을 기입해주세요." />
                     <div className="validate"></div>
                     </div>
                     <div className="form-group col-md-6">
-                    <label for="name">연락처</label>
+                    <label htmlFor="name">연락처</label>
                     <input type="email" className="form-control" name="email" id="email" data-rule="email" data-msg="연락처를 기입해주세요." />
                     <div className="validate"></div>
                     </div>
                 </div>
                 <div className="form-group">
-                    <label for="name">제목</label>
+                    <label htmlFor="name">제목</label>
                     <input type="text" className="form-control" name="subject" id="subject" />
                     <div className="validate"></div>
                 </div>
                 <div className="form-group">
-                    <label for="name">내용</label>
+                    <label htmlFor="name">내용</label>
                     <textarea className="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
                     <div className="validate"></div>
                 </div>
@@ -208,7 +208,7 @@ class UserListComponent extends Component{
             </div>
 
         </div>
-        </section>
+        </section> */}
 
 
 
@@ -248,9 +248,8 @@ class UserListComponent extends Component{
 
         );
     }
-
-
 }
+export default MainComponent
 
 {/* const style = {
     marginRight: 3,
@@ -261,5 +260,3 @@ class UserListComponent extends Component{
 const form ={
     marginTop:80
 }
-
-export default UserListComponent;

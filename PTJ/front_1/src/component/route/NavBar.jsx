@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
-//import addUser from '../user/UserListComponent'
+import AuthenticationService from '../JWT/AuthenticationService';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 class NavBar extends Component{
 
@@ -10,34 +11,20 @@ class NavBar extends Component{
     } 
 
     render() {
+        const isUserLoggedIn = AuthenticationService.isUserLoggedIn();
+
         return(
             <div>
-                {/* <AppBar position="static">
-                    <Toolbar>
-                        <IconButton edge="start" color="inherit" aria-label="Menu" href="/">
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography variant="h6" style={style}>
-                            NaNum
-                        </Typography>
-                        <Button variant="contained" color="primary" href="login">로그인</Button>
-                    </Toolbar>
-                </AppBar> */}
-
                 <div>
                     <header id="header" className="fixed-top">
                         <div className="container d-flex align-items-center">
-                    
                             <h1 className="logo mr-auto"><a href="/">NaNum</a></h1>
-                            
-                        
-                    
                             <nav className="nav-menu d-none d-lg-block">
                             <ul>
                                 <li><a href="/">Home</a></li>
                                 <li className="drop-down"><a href="#about">식품</a>
                                 <ul>
-                                    <li><a href="AllProducts">전체</a></li>
+                                    <li><a href="/AllProducts">전체</a></li>
                                     <li><a href="#">유기농</a></li>
                                     <li><a href="#">매실청</a></li>
                                 </ul>
@@ -62,23 +49,16 @@ class NavBar extends Component{
                                 </ul>
                                 </li>
                                 <li><a href="#contact">문의</a></li>
-                    
+                                {isUserLoggedIn && <li><a href="#contact">나의 페이지</a></li>}
                             </ul>
                             </nav>
-                    
-                            <a href="login" className="get-started-btn scrollto">로그인</a>
-                    
+                            {!isUserLoggedIn && <a href="/login" className="get-started-btn scrollto">로그인</a>}
+                            {isUserLoggedIn && <a href="/login" className="get-started-btn scrollto" onClick={AuthenticationService.logout}>로그아웃</a>}
                         </div>
                     </header>
                     </div>
-                </div>
-        
+                </div>       
         );
     }
 }
-
-const style ={
-    flexGrow: 1
-}
-
 export default NavBar;
