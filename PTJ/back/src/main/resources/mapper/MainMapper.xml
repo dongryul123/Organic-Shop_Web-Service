@@ -12,5 +12,10 @@
 			SELECT * FROM products
 			ORDER BY id
 		</select>
+
+		<select id="productDetail" resultType="com.example.demo.vo.ProductVO">
+			SELECT * FROM products
+			where id=#{id}
+		</select>
 		
 	</mapper>

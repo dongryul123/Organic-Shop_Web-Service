@@ -13,5 +13,6 @@ public interface MainMapper {
 	//void updateUser(UserVO user);
 	void insertProduct(ProductVO product);
 	//void deleteUser(int id);
+	ProductVO productDetail(int id);
 	
 }
