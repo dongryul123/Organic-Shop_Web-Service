@@ -3,7 +3,7 @@ import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import queryString from 'query-string'
  
-class DetailProduct extends Component {
+class OrderProduct extends Component {
     constructor(props) {
         super(props);
         console.log('in constructor');
@@ -29,10 +29,13 @@ class DetailProduct extends Component {
         // const {params} = this.props.match;
         // console.log("params : ")
         // console.log(params.id)
-        const values = this.props.match.params.id;
-        console.log(values);
+        // const values = this.props.match.params.id;
+        // console.log(values);
 
-        axios.get(`http://localhost:8080/products/${values}`).then(res => {
+        // axios.get(`http://localhost:8080/products/${values}`).then(res => {
+        //     this.setState({data: res.data});
+        // });
+        axios.get(`http://localhost:8080/products/1`).then(res => {
             this.setState({data: res.data});
         });
 
@@ -78,7 +81,7 @@ class DetailProduct extends Component {
 
         <div class="card card-outline-secondary my-4">
           <div class="card-header">
-            상품 설명
+            구매자 정보
           </div>
           <div class="card-body">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
@@ -88,8 +91,21 @@ class DetailProduct extends Component {
             <small class="text-muted">Posted by Anonymous on 3/1/17</small>
             
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+          </div>
+        </div>
 
-            <a href="#" class="btn btn-success">바로 주문</a>
+        <div class="card card-outline-secondary my-4">
+          <div class="card-header">
+            받는사람 정보
+          </div>
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
           </div>
         </div>
 
@@ -102,5 +118,5 @@ class DetailProduct extends Component {
         );
     }
 }
-export default DetailProduct
+export default OrderProduct
 ;

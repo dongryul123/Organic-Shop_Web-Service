@@ -8,6 +8,7 @@ import ProductForm from "../product/ProductForm";
 // import AllProducts from "../product/AllProducts";
 import AllProducts from "../product/AllProducts";
 import DetailProduct from "../product/DetailProduct";
+import OrderProduct from "../product/OrderProduct";
 
 import LoginApp from "../JWT/LoginApp";
 import Login from "../user/Login";
@@ -31,7 +32,12 @@ const AppRouter = () =>{
 
                     <Route path="/add-product" component={ProductForm} />
                     <Route exact path="/AllProducts" component={AllProducts} />
+                    
+                    <Route path="/order" component={OrderProduct} />
+
                     <Route exact path="/:id" component={DetailProduct} />
+                    {/* Router 경로 불러올 때 위에서부터 불러옴. 설계시 주의할것..! */}
+                    
                 </Switch>
             </div>
             </BrowserRouter>
