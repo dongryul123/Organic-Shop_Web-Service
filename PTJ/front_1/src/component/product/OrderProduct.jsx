@@ -69,7 +69,7 @@ class OrderProduct extends Component {
             <div class="container">
     <div class="row" style={{marginTop:100}}>
       <div class="col-lg-9">
-        <div class="card mt-4">
+        <div class="card mt-2">
           <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt=""/>
           <div class="card-body">
             <h3 class="card-title">{this.state.data.name}</h3>
@@ -84,13 +84,14 @@ class OrderProduct extends Component {
             구매자 정보
           </div>
           <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            <p>이름</p>
+
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            <p>이메일</p>
+
+
+            <p>휴대폰 번호</p>
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
           </div>
         </div>
 
